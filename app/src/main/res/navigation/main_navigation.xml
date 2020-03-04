@@ -8,5 +8,26 @@
         android:id="@+id/movies"
         android:name="com.mo22sen.batmanmovies.ui.movies.MoviesFragment"
         android:label="MoviesFragment"
-        tools:layout="@layout/fragment_movies" />
+        tools:layout="@layout/fragment_movies">
+        <action
+            android:id="@+id/action_movies_to_detail"
+            app:destination="@id/detail"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim">
+            <argument
+                android:name="data"
+                app:argType="com.mo22sen.batmanmovies.data.Search" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detail"
+        android:name="com.mo22sen.batmanmovies.ui.details.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="data"
+            app:argType="com.mo22sen.batmanmovies.data.Search" />
+    </fragment>
 </navigation>

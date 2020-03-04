@@ -16,6 +16,9 @@ class MoviesFragment : BaseFragment<MoviesViewModel, FragmentMoviesBinding>() {
 
     override fun configEvents() {
         list_movie.adapter = adapter
+        adapter.onItemClicked = { item, _ ->
+            viewModel.openDetailsMovie(item)
+        }
     }
 
     override fun bindObservables() {
