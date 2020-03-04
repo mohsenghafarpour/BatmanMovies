@@ -2,9 +2,7 @@ package com.mo22sen.batmanmovies.application
 
 import android.app.Application
 import com.mo22sen.batmanmovies.BuildConfig
-import com.mo22sen.batmanmovies.di.appModule
-import com.mo22sen.batmanmovies.di.modelModule
-import com.mo22sen.batmanmovies.di.viewModelModule
+import com.mo22sen.batmanmovies.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -25,7 +23,7 @@ class App : Application() {
             androidContext(this@App)
             androidLogger(Level.DEBUG)
             modules(
-                appModule, viewModelModule, modelModule
+                appModule, networkModule, restModule, repositoryModule, viewModelModule, modelModule
             )
         }
 
