@@ -23,7 +23,8 @@ class App : Application() {
             androidContext(this@App)
             androidLogger(Level.DEBUG)
             modules(
-                appModule, networkModule, restModule, repositoryModule, viewModelModule, modelModule
+                appModule, networkModule, restModule, repositoryModule,
+                viewModelModule, modelModule, adapterModule
             )
         }
 
