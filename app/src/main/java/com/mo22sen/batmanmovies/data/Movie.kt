@@ -2,7 +2,7 @@ package com.mo22sen.batmanmovies.data
 
 import com.google.gson.annotations.SerializedName
 
-data class Movies(
+data class Movie(
     @SerializedName("Search")
     val search: List<Search>,
     @SerializedName("totalResults")
