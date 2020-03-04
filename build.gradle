@@ -4,11 +4,39 @@ buildscript {
     ext{
         kotlinVersion = '1.3.61'
         ktxVersion = '1.1.0'// '1.0.2'
-        fragmentKtxVersion = '1.2.0-alpha03'}
+        fragmentKtxVersion = '1.2.0-alpha03'
+        googleMaterialVersion = '1.1.0-alpha10'
+        recyclerViewVersion = '1.1.0'
+
+        // Network
+        retrofitVersion = '2.6.0'
+        okHttpVersion = '3.12.0'
+
+        // Image Processing
+        glideVersion = '4.9.0'
+
+        // Koin
+        koinVersion = '2.0.0-GA'
+
+        // Coroutine
+        coroutineVersion = '1.3.0-M1'
+
+        // LifeCycles
+        lifecycleVersion = '2.2.0-alpha03'
+
+        // Navigation
+        navigationVersion = "2.2.0-alpha03"
+
+        // Debugging
+        timberVersion = '4.7.1'
+
+        // Room
+        roomVersion = '2.2.2'
+    }
     repositories {
         google()
         jcenter()
-        
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.3'
@@ -22,7 +50,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+
     }
 }
 
