@@ -3,4 +3,8 @@
     <string name="batman">BATMAN</string>
     <string name="details">details</string>
     <string name="show_detail">show Detail</string>
+    <string name="country">country</string>
+    <string name="director">director</string>
+    <string name="actors">actors</string>
+    <string name="plot">plot</string>
 </resources>
