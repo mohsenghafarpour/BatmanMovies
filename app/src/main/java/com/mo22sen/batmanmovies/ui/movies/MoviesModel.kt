@@ -7,4 +7,7 @@ class MoviesModel(private val moviesRepository: MoviesRepository) : BaseModel() 
 
     suspend fun getMoviesFromNetwork(apiKey : String , search : String)=
         moviesRepository.getMoviesFromNetwork(apiKey,search)
+
+    val movies = moviesRepository.getMovies()
+
 }

@@ -5,5 +5,5 @@ import com.mo22sen.batmanmovies.data.repository.MoviesRepositoryImpl
 import org.koin.dsl.module
 
 val repositoryModule = module {
-    single<MoviesRepository> { MoviesRepositoryImpl(get()) }
+    single<MoviesRepository> { MoviesRepositoryImpl(get(),get()) }
 }

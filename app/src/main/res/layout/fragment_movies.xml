@@ -19,7 +19,7 @@
             android:id="@+id/list_movie"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:data="@{vm.movies.search}"
+            app:data="@{vm.moviess}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
