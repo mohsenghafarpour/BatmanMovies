@@ -13,4 +13,6 @@ interface MoviesRepository {
     fun getMovies(): LiveData<List<Search>>
 
     suspend fun getDetailsMovieFromNetwork(apiKey: String, imdbId: String): Result<DetailMovie>
+
+    suspend fun getDetailMovie(apiKey: String, imdbID: String): DetailMovie?
 }

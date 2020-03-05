@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
-const val TABLE_NAME = "movie"
+private const val TABLE_NAME = "movie"
 
 data class Movie(
     @SerializedName("Search")

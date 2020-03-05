@@ -17,6 +17,7 @@ class DetailFragment : BaseFragment<DetailViewModel, FragmentDetailBinding>() {
     }
 
     override fun bindObservables() {
+
     }
 
     override fun initBinding() {

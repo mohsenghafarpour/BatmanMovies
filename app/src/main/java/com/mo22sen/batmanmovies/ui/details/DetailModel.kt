@@ -6,6 +6,7 @@ import money.minimum.payment.base.BaseModel
 class DetailModel(private val moviesRepository: MoviesRepository) : BaseModel() {
 
 
-    suspend fun getDetailsMovieFromNetwork(apiKey: String, imdbId: String) =
-        moviesRepository.getDetailsMovieFromNetwork(apiKey, imdbId)
+    suspend fun detailMovie(apiKey: String, imdbID: String) =
+        moviesRepository.getDetailMovie(apiKey, imdbID)
+
 }

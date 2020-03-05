@@ -18,7 +18,7 @@ class MoviesRepositoryImpl(
         safeApiCall {
             val response = moviesApi.getMovies(apiKey = apiKey, search = search)
             movieDao.clearMovies()
-            movieDao.upsertServices(response.search)
+            movieDao.upsertMovies(response.search)
             return@safeApiCall Result.Success(response)
         }
 
@@ -28,7 +28,21 @@ class MoviesRepositoryImpl(
         apiKey: String,
         imdbId: String
     ): Result<DetailMovie> = safeApiCall {
-        val response = moviesApi.getDetailsMovie(apiKey = apiKey, imdbId = imdbId)
-        return@safeApiCall Result.Success(response)
+        return@safeApiCall Result.Success(
+            moviesApi.getDetailsMovie(
+                apiKey = apiKey,
+                imdbId = imdbId
+            )
+        )
+    }
+
+    override suspend fun getDetailMovie(apiKey: String, imdbID: String): DetailMovie? {
+        return movieDao.getDetailMovie(imdbID)
+            ?: return when (val result = getDetailsMovieFromNetwork(apiKey, imdbID)) {
+                is Result.Success ->
+                    result.data.also { movieDao.upsertDetailMovie(it) }
+                is Result.Error ->
+                    null
+            }
     }
 }
