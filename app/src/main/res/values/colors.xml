@@ -7,6 +7,9 @@
 
     <color name="black">#000000</color>
     <color name="gray900">#202124</color>
+    <color name="gray700">#707070</color>
+    <color name="gray600">#8F909E</color>
+    <color name="gray500">#ABACB6</color>
     <color name="gray150">#F5F5F5</color>
     <color name="gray100">#FAFAFA</color>
     <color name="white">#FFFFFF</color>
