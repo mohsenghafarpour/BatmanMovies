@@ -24,7 +24,7 @@ class App : Application() {
             androidLogger(Level.DEBUG)
             modules(
                 appModule, networkModule, restModule, repositoryModule,
-                viewModelModule, modelModule, adapterModule
+                viewModelModule, modelModule, adapterModule, dbModule
             )
         }
 
