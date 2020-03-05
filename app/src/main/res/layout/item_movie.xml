@@ -12,35 +12,88 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/navy900">
+
+        <ImageView
+            android:id="@+id/img_poster"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dimen_standard"
+            android:layout_marginTop="@dimen/dimen_standard"
+            android:contentDescription="@string/app_name"
+            app:image="@{item.poster}"
+            app:layout_constraintDimensionRatio="h,3:4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
 
         <TextView
             android:id="@+id/txt_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_standard_x"
             android:text="@{item.title}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_poster"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/txt_year"
+            app:layout_constraintStart_toEndOf="@id/img_poster"
+            app:layout_constraintTop_toTopOf="@id/img_poster"
             tools:text="Batman Begins" />
 
-        <ImageView
-            android:id="@+id/img_poster"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/app_name"
-            app:image="@{item.poster}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
             android:id="@+id/txt_year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{item.year}"
-            app:layout_constraintBaseline_toBaselineOf="@id/txt_title"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/txt_details"
+            app:layout_constraintStart_toStartOf="@id/txt_title"
+            app:layout_constraintTop_toBottomOf="@id/txt_title"
             tools:text="2005" />
+
+
+        <TextView
+            android:id="@+id/txt_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/details"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/img_poster"
+            app:layout_constraintStart_toStartOf="@id/txt_title"
+            app:layout_constraintTop_toBottomOf="@id/txt_year"
+            tools:text="details" />
+
+        <ImageView
+            android:id="@+id/view_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dimen_standard_x5"
+            android:layout_marginTop="@dimen/dimen_standard"
+            android:layout_marginEnd="@dimen/dimen_standard_x5"
+            android:layout_marginBottom="@dimen/dimen_standard"
+            android:background="@drawable/shape_line_dashed_divider"
+            android:contentDescription="@string/app_name"
+            android:layerType="software"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_poster" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_standard_x2"
+            android:backgroundTint="@color/yellow800"
+            android:text="@string/show_detail"
+            android:textColor="@color/white"
+            android:textSize="@dimen/extraSmallTextSize10sp"
+            app:cornerRadius="@dimen/dimen_standard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

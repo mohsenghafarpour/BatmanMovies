@@ -7,25 +7,26 @@
 
         <variable
             name="vm"
-            type="com.mo22sen.batmanmovies.ui.movies.MoviesViewModel" />
+            type="com.mo22sen.batmanmovies.ui.splash.SplashViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/list_movie"
+        <fragment
+            android:id="@+id/navigation_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:data="@{vm.movies}"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:itemCount="5"
-            tools:listitem="@layout/item_movie" />
+            app:navGraph="@navigation/splash_navigation"
+            tools:layout="@layout/fragment_splash_detail" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

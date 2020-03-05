@@ -94,5 +94,9 @@ dependencies {
     kapt "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
 
+    // Animation
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+
 
 }
