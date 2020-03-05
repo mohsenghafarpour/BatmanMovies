@@ -3,7 +3,6 @@ package com.mo22sen.batmanmovies.ui.movies
 import androidx.recyclerview.widget.DiffUtil
 import com.mo22sen.batmanmovies.R
 import com.mo22sen.batmanmovies.base.BaseAdapter
-import com.mo22sen.batmanmovies.data.Movie
 import com.mo22sen.batmanmovies.data.Search
 
 class MoviesAdapter : BaseAdapter<Search>(DIFF_CALLBACK) {

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">BatmanMovies</string>
+    <string name="batman">BATMAN</string>
+    <string name="details">details</string>
+    <string name="show_detail">show Detail</string>
 </resources>

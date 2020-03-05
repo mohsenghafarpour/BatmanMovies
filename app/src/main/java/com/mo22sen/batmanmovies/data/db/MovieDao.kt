@@ -15,4 +15,8 @@ interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertServices(search: List<Search>)
+
+
+    @Query("DELETE FROM movie")
+    suspend fun clearMovies()
 }

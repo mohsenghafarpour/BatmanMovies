@@ -17,6 +17,7 @@ class MoviesRepositoryImpl(
     override suspend fun getMoviesFromNetwork(apiKey: String, search: String): Result<Movie> =
         safeApiCall {
             val response = moviesApi.getMovies(apiKey = apiKey, search = search)
+            movieDao.clearMovies()
             movieDao.upsertServices(response.search)
             return@safeApiCall Result.Success(response)
         }

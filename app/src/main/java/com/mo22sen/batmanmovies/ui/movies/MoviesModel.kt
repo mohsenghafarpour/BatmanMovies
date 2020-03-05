@@ -5,9 +5,9 @@ import money.minimum.payment.base.BaseModel
 
 class MoviesModel(private val moviesRepository: MoviesRepository) : BaseModel() {
 
+    val movies = moviesRepository.getMovies()
+
     suspend fun getMoviesFromNetwork(apiKey : String , search : String)=
         moviesRepository.getMoviesFromNetwork(apiKey,search)
-
-    val movies = moviesRepository.getMovies()
 
 }

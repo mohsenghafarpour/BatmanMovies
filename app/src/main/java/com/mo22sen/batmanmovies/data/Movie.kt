@@ -21,15 +21,13 @@ data class Movie(
 @Entity(tableName = TABLE_NAME)
 @Parcelize
 data class Search(
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id")
-    val id: Int,
     @SerializedName("Title")
     @ColumnInfo(name = "Title")
     val title: String,
     @SerializedName("Year")
     @ColumnInfo(name = "Year")
     val year: String,
+    @PrimaryKey
     @SerializedName("imdbID")
     @ColumnInfo(name = "imdbID")
     val imdbId: String,

@@ -32,6 +32,8 @@ buildscript {
 
         // Room
         roomVersion = '2.2.2'
+
+        lottieVersion = '3.2.2'
     }
     repositories {
         google()
